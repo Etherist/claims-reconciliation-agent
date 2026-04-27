@@ -52,19 +52,19 @@ This agent automates that entire pipeline — ingest → clean → match → det
 
 ```mermaid
 flowchart TD
-    Start([🏥 User<br/>Uploads Claims<br/>&amp; Payments]) --> Ingest[📥 FileIngestor<br/>Parse CSV/JSON/EDI<br/>Validate schema &amp; size]
+    Start([🏥 User<br>Uploads Claims<br>& Payments]) --> Ingest[📥 FileIngestor<br>Parse CSV/JSON/EDI<br>Validate schema & size]
     
-    Ingest --> Clean1[🧹 DataCleaner<br/>Claims]
-    Ingest --> Clean2[🧹 DataCleaner<br/>Payments]
+    Ingest --> Clean1[🧹 DataCleaner<br>Claims]
+    Ingest --> Clean2[🧹 DataCleaner<br>Payments]
     
-    Clean1 --> Match{{🔗 FuzzyMatcher<br/>Weighted Scoring<br/>Name 50% • Date 30%<br/>Amount 20%}}
+    Clean1 --> Match{{🔗 FuzzyMatcher<br>Weighted Scoring<br>Name 50% Date 30%<br>Amount 20%}}
     Clean2 --> Match
     
-    Match --> Detect[🚨 DiscrepancyDetector<br/>• Under/Overpayments<br/>• Duplicates<br/>• Unmatched Items<br/>• Priority Flags]
+    Match --> Detect[🚨 DiscrepancyDetector<br>- Under/Overpayments<br>- Duplicates<br>- Unmatched Items<br>- Priority Flags]
     
-    Detect --> Report[📄 ReportGenerator<br/>• CSV (quoted)<br/>• JSON (structured)<br/>• PDF (formatted)]
+    Detect --> Report[📄 ReportGenerator<br>- CSV quoted<br>- JSON structured<br>- PDF formatted]
     
-    Report --> Output([📁 Output Files<br/>reconciliation_*.csv<br/>reconciliation_*.json<br/>reconciliation_*.pdf])
+    Report --> Output([📁 Output Files<br>reconciliation_*.csv<br>reconciliation_*.json<br>reconciliation_*.pdf])
 ```
 
 ### Data Pipeline
