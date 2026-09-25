@@ -31,7 +31,7 @@ This repository contains a substantial working implementation with meaningful en
 <sub>Engineering estimate refreshed 2026-09-25 from GitHub repository metadata and remotely read source/test/configuration files. It is an evidence-based maturity estimate, not a claim that every runtime path has been independently executed or externally certified.</sub>
 <!-- engineering-maturity:end -->
 
-> **Production-grade multi-agent system** for automated healthcare claims reconciliation — Australian insurers, zero manual matching.
+> **Substantial Working Implementation multi-agent system** for automated healthcare claims reconciliation — Australian insurers, zero manual matching.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -45,9 +45,9 @@ This repository contains a substantial working implementation with meaningful en
 
 ## 📋 Overview
 
-The **Claims Reconciliation Agent** is an enterprise-ready Python system that automatically reconciles healthcare claims against payments using fuzzy matching and intelligent discrepancy detection. Designed for Australian insurers (Medicare, Bupa, Medibank, HBF, nib), it processes CSV/JSON/EDI files, matches records with configurable thresholds, and generates audit-ready multi-format reports.
+The **Claims Reconciliation Agent** is an substantial working implementation Python system that automatically reconciles healthcare claims against payments using fuzzy matching and intelligent discrepancy detection. Designed for Australian insurers (Medicare, Bupa, Medibank, HBF, nib), it processes CSV/JSON/EDI files, matches records with configurable thresholds, and generates audit-ready multi-format reports.
 
-**Production status:** v1.0.0 — battle-tested, fully typed, 100% core coverage, CI/CD enabled.
+**Production status:** v1.0.0 — substantially implemented and under active validation, fully typed, 100% core coverage, CI/CD enabled.
 
 ---
 
@@ -642,7 +642,7 @@ GitHub: [@Etherist](https://github.com/Etherist) · LinkedIn: [linkedin.com/in/r
 
 <div align="center">
 
-**Status:** ✅ Production-ready — v1.0.0 · 85 tests passing · 100% core coverage · Fully documented
+**Status:** ✅ Substantial Working Implementation — v1.0.0 · 85 tests passing · 100% core coverage · Fully documented
 
 **Last updated:** 2026-04-28
 
