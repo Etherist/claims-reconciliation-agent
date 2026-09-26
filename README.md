@@ -31,13 +31,11 @@ This repository contains a substantial working implementation with meaningful en
 <sub>Engineering estimate refreshed 2026-09-25 from GitHub repository metadata and remotely read source/test/configuration files. It is an evidence-based maturity estimate, not a claim that every runtime path has been independently executed or externally certified.</sub>
 <!-- engineering-maturity:end -->
 
-> **Substantial Working Implementation multi-agent system** for automated healthcare claims reconciliation — Australian insurers, zero manual matching.
+> **Substantial working multi-agent implementation** for automated healthcare claims reconciliation, with configurable matching, discrepancy detection and audit-oriented reporting.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Tests: 85/85 passing](https://img.shields.io/badge/tests-85%2F85%20passing-brightgreen.svg)](https://github.com/ed-donner/llm_engineering/actions)
-[![Coverage: 100% core](https://img.shields.io/badge/coverage-100%25%20core-ff69b4.svg)](https://github.com/ed-donner/llm_engineering/actions)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-146eb4.svg)](https://github.com/ed-donner/llm_engineering/actions)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-146eb4.svg)](https://github.com/Etherist/claims-reconciliation-agent/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Security: CSV injection](https://img.shields.io/badge/security-CSV%20injection%20prevented-green.svg)](docs/SECURITY.md)
 
@@ -45,9 +43,9 @@ This repository contains a substantial working implementation with meaningful en
 
 ## 📋 Overview
 
-The **Claims Reconciliation Agent** is an substantial working implementation Python system that automatically reconciles healthcare claims against payments using fuzzy matching and intelligent discrepancy detection. Designed for Australian insurers (Medicare, Bupa, Medibank, HBF, nib), it processes CSV/JSON/EDI files, matches records with configurable thresholds, and generates audit-ready multi-format reports.
+The **Claims Reconciliation Agent** is a substantial working Python implementation that automatically reconciles healthcare claims against payments using fuzzy matching and intelligent discrepancy detection. Designed for Australian insurers (Medicare, Bupa, Medibank, HBF, nib), it processes CSV/JSON/EDI files, matches records with configurable thresholds, and generates audit-ready multi-format reports.
 
-**Production status:** v1.0.0 — substantially implemented and under active validation, fully typed, 100% core coverage, CI/CD enabled.
+**Engineering status:** v1.0.0-style implementation under active validation, with typed Python code, an 85-test suite, and GitHub Actions workflows configured. Current CI requires attention before release claims are made.
 
 ---
 
@@ -73,8 +71,8 @@ This agent automates that entire pipeline — ingest → clean → match → det
 | **🇦🇺 Australian Insurers** | Pre-configured for Medicare, Bupa, Medibank, HBF, nib |
 | **📊 Multi-Format Reports** | CSV (quoted, formula-injection safe), JSON (structured), PDF (formatted, printable) |
 | **⚙️ Configurable Thresholds** | Name similarity (50–100%), date tolerance (0–7 days), amount tolerance (0–10% or absolute) |
-| **🔒 Production Security** | CSV injection prevention, path traversal protection, PII sanitization (optional) |
-| **✅ Quality Assured** | **85 automated tests** (100% pass), **100% coverage** on all core agents |
+| **🔒 Security Controls** | CSV injection prevention, path traversal protection, optional PII log sanitisation |
+| **✅ Verification Suite** | **85 automated tests** are defined across the repository; re-run locally/CI to verify the current pass and coverage state |
 | **🎛️ Three Interface Modes** | Streamlit UI (interactive), CLI (batch/automation), Python API (programmatic integration) |
 
 ---
@@ -120,7 +118,7 @@ Multi-format audit reports (CSV, JSON, PDF)
 
 ```bash
 # Clone & install
-git clone https://github.com/ed-donner/llm_engineering.git
+git clone https://github.com/Etherist/claims-reconciliation-agent.git
 cd claims-reconciliation-agent
 uv sync --extra dev
 
@@ -148,7 +146,7 @@ uv run python src/app/cli.py \
 ### One-Line Setup
 
 ```bash
-git clone https://github.com/ed-donner/llm_engineering.git
+git clone https://github.com/Etherist/claims-reconciliation-agent.git
 cd claims-reconciliation-agent
 uv sync --extra dev  # installs all dependencies + dev tools
 ```
@@ -163,7 +161,7 @@ pip install -e ".[dev]"  # editable install with dev dependencies
 ### Verify
 
 ```bash
-uv run pytest --cov=src --cov-report=term  # 85 tests, 100% on core agents
+uv run pytest --cov=src --cov-report=term  # run the 85-test suite and generate a fresh coverage report
 ```
 
 ---
@@ -363,12 +361,12 @@ gen.generate_pdf_report(matched_df, discrepancies, summary)
 # All tests (85 tests, ~3 seconds)
 uv run pytest
 
-# With coverage (100% on core agents)
+# Generate a fresh local coverage report
 uv run pytest --cov=src --cov-report=term --cov-report=html
 # Open htmlcov/index.html for detailed breakdown
 ```
 
-**Coverage breakdown:**
+**Documented local coverage snapshot (re-run to verify current state):**
 
 | Module | Coverage |
 |--------|----------|
@@ -628,7 +626,7 @@ Built for the **Australian healthcare industry**. Thanks to:
 
 - **📖 Documentation:** [docs/architecture.md](docs/architecture.md) · [docs/demo_guide.md](docs/demo_guide.md)
 - **🔒 Security:** [docs/SECURITY.md](docs/SECURITY.md) (vulnerability reporting)
-- **🐛 Issues:** https://github.com/ed-donner/llm_engineering/issues
+- **🐛 Issues:** https://github.com/Etherist/claims-reconciliation-agent/issues
 - **💬 Discussions:** GitHub Discussions (coming soon)
 
 ---
@@ -642,7 +640,7 @@ GitHub: [@Etherist](https://github.com/Etherist) · LinkedIn: [linkedin.com/in/r
 
 <div align="center">
 
-**Status:** ✅ Substantial Working Implementation — v1.0.0 · 85 tests passing · 100% core coverage · Fully documented
+**Status:** Substantial Working Implementation — v1.0.0 · 85 automated tests defined · extensive documentation · validation and hardening in progress
 
 **Last updated:** 2026-04-28
 
